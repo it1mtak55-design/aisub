@@ -2,6 +2,11 @@ import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # 👉 dán token của bạn vào đây
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 # 👉 địa chỉ API bạn đang chạy

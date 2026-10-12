@@ -3,9 +3,10 @@ import math
 from datetime import datetime
 from xml.dom.minidom import Document
 from docx import Document
+from dotenv import load_dotenv
 from pymongo import MongoClient
 from openai import OpenAI
-
+load_dotenv()
 # 🔹 OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5.4")
